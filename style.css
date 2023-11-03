@@ -11,6 +11,7 @@
 *, *:before, *:after {
   box-sizing: border-box;
   margin: 0;
+  overflow: hidden;
 }
 
 body {
@@ -39,6 +40,7 @@ footer {
 
 .c {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .tb {
@@ -58,10 +60,17 @@ footer {
   border-color: var(--bdr-color);
   display: grid;
   grid-template-rows: 10rem auto 10rem;
+  overflow-x: hidden;
 }
 
 /* SITE WIDE */
 
+.logo {
+  position: absolute;
+  padding: 0.25rem;
+  height:3rem;
+  overflow-x: hidden;
+}
 @media only screen and (min-width: 768px) {
   .fs {
     padding: 3rem;
