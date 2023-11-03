@@ -20,6 +20,8 @@ body {
 
 header {
   background-color: var(--fg-color);
+  display: grid;
+  grid-template: "l" 3rem "sb" 3rem;
 }
 
 main {
@@ -59,18 +61,22 @@ footer {
 .container {
   border-color: var(--bdr-color);
   display: grid;
-  grid-template-rows: 10rem auto 10rem;
-  overflow-x: hidden;
+  grid-template-rows: 6rem auto 10rem;
 }
 
 /* SITE WIDE */
 
-.logo {
-  position: absolute;
-  padding: 0.25rem;
-  height:3rem;
-  overflow-x: hidden;
+#header-logo-container {
+  grid-area: l;
+  display: flex;
+  justify-content: center;
 }
+
+.logo {
+  height: 100%;
+  padding: 0.25rem;
+}
+
 @media only screen and (min-width: 768px) {
   .fs {
     padding: 3rem;
