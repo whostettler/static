@@ -31,6 +31,52 @@ button {
   cursor: pointer;
 }
 
+h1 {
+  text-align: center;
+}
+
+/* UTILITIES */
+
+.fs {
+  height: 100vh;
+  width: 100vw;
+  padding: 0.75rem;
+}
+
+.c {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.cc {
+  width: fit-content;
+  margin: auto;
+}
+
+.tb {
+  border-top: 0.25rem solid;
+}
+
+.sb {
+  border-left: 0.25rem solid;
+  border-right: 0.25rem solid;
+}
+
+.bb {
+  border-bottom: 0.25rem solid;
+}
+
+.shadow {
+  border: var(--bg-color);  
+  box-shadow: 0.125rem 0.125rem var(--bg-color);
+}
+
+.shadow::focus {
+  border: var(--bg-color);  
+}
+
+/* SITE WIDE */
+
 .container {
   border-color: var(--bdr-color);
   display: grid;
@@ -54,42 +100,6 @@ footer {
   background-color: var(--fg-color);
 }
 
-/* UTILITIES */
-
-.fs {
-  height: 100vh;
-  width: 100vw;
-  padding: 0.75rem;
-}
-
-.c {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.tb {
-  border-top: 0.25rem solid;
-}
-
-.sb {
-  border-left: 0.25rem solid;
-  border-right: 0.25rem solid;
-}
-
-.bb {
-  border-bottom: 0.25rem solid;
-}
-
-.sdb {  
-  border-color: var(--bdr-color);
-  border-radius: 0.25rem;
-  border-bottom-style: solid;
-  border-right-style: solid;
-  border-width: 0.125rem;
-}
-
-/* SITE WIDE */
-
 #header-logo-container {
   grid-area: l;
   height: fit-content;
@@ -112,6 +122,7 @@ footer {
 .searchbar-container {
   grid-area: sb;
   margin: 0.5rem;
+  border-radius: 0.25rem;
   background-color: whitesmoke;
 }
 
@@ -133,6 +144,9 @@ footer {
   height: 3rem;
   padding: 0.5rem;
 }
+
+
+
 
 @media only screen and (min-width: 768px) {
   .fs {
