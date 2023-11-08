@@ -4,7 +4,6 @@
   --bdr-color: #423850;
   --hl-color: #E37957;
   --acc-color: #DDA861;
-  --bdr-widgit ath: 0.25rem;
 }
 
 /* GENERAL STYLES */
@@ -103,13 +102,11 @@ footer {
 
 #header-logo-container {
   grid-area: l;
-  height: 4rem;
-  /* width: fit-content; */
 }
 
 .logo-m {
-  height: 4rem;
-  width: 4rem;
+  height: 100%;
+  width: 100%;
   padding: 0.5rem;
 }
 
@@ -125,21 +122,23 @@ footer {
   margin: 0.5rem;
   border-radius: 0.25rem;
   background-color: whitesmoke;
+  min-width: 0px;
 }
 
 .searchbar {
   width: 100%;
   height: 100%;
   display: flex;
+  min-width: 0px;
 }
 
 .search-text {
   font-size: 1.25rem;
-  height: 4rem
   padding: 0.25rem;
   outline: none;
   flex-grow: 1;
   size: 1;
+  min-width: 0px;
 }
 
 .search-button {
