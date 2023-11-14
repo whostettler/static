@@ -35,6 +35,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  width: 100%;
+}
+
 h1 {
   color: var(--bdr-color);
   font-size: 3rem;}
@@ -59,8 +63,14 @@ p {
   color: var(--txt-color);
 }
 
-i {
-  color: var(--txt-color);
+mark {
+  color: var(--bdr-color);
+  background-color: var(--emph-color);
+}
+
+::selection {
+  color: azure;
+  background: var(--hl-color);
 }
 
 /* UTILITIES */
@@ -72,12 +82,16 @@ i {
 
 .c {
   height: 100%;
-  overflow: hidden;
 }
 
 .cc {
   margin: 0.5rem;
   padding: 0.25rem 0.5rem;
+
+  width: auto;
+
+  height: fit-content;
+  overflow-y: scroll;
 }
 
 .txt-c {
@@ -85,8 +99,8 @@ i {
 }
 
 .shadow {
-  border: solid 0.1px ;
-  box-shadow: 0.125rem 0.125rem var(--sh-color);
+  border: solid 1px ;
+  box-shadow: 4px 4px var(--sh-color);
 }
 
 .searchbar-container {
@@ -123,11 +137,10 @@ i {
   width: fit-content;
 }
 
-
-.placeh {
-/* min-height: 10rem; */
-background-color: #e31c51;
+.large-img{
+  width: 100%
 }
+
 /* SITE WIDE */
 
 .container {
@@ -145,10 +158,10 @@ header {
 
 main {
   grid-area: main;
+  height: fit-content;
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
-  
 }
 
 footer {
@@ -178,13 +191,26 @@ footer {
   }
 
   .cc {
-    width: auto;
-    min-width: 10rem;
-    max-width: 45vw;
     margin: 1rem;
-    flex-grow: 1;
+    
+    width: fit-content;
+
+    min-width: 5rem;
+    min-height: 5rem;
+
+    max-width: 40%;
+    max-height: 30rem;
   }
- 
+
+  .spacer {
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  .large-img {
+    max-width: 150px;
+  }
+
   .fs {
     padding: 0.5rem;
   }
@@ -203,6 +229,4 @@ footer {
     grid-area: t;
     display: inline-block;
   }
-
-
 }
