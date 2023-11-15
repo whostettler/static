@@ -35,10 +35,6 @@ button {
   cursor: pointer;
 }
 
-img {
-  width: 100%;
-}
-
 h1 {
   color: var(--bdr-color);
   font-size: 3rem;}
@@ -85,12 +81,6 @@ mark {
 }
 
 .cc {
-  margin: 0.5rem;
-  padding: 0.25rem 0.5rem;
-
-  width: auto;
-
-  height: fit-content;
   overflow-y: scroll;
 }
 
@@ -99,6 +89,7 @@ mark {
 }
 
 .shadow {
+  margin: 0.5rem;
   border: solid 1px ;
   box-shadow: 4px 4px var(--sh-color);
 }
@@ -137,8 +128,12 @@ mark {
   width: fit-content;
 }
 
-.large-img{
-  width: 100%
+.no-scroll{
+  overflow: hidden;
+}
+
+.spacer {
+  flex-grow: 1;
 }
 
 /* SITE WIDE */
@@ -158,15 +153,16 @@ header {
 
 main {
   grid-area: main;
-  height: fit-content;
+  height: 100%;
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
+  overflow: hide;
 }
 
 footer {
   grid-area: footer;
-  background-color: var(--bg-color);
+  background-color: var(--emph-color);
 }
 
 #header-logo-container {
@@ -192,23 +188,10 @@ footer {
 
   .cc {
     margin: 1rem;
-    
-    width: fit-content;
-
-    min-width: 5rem;
-    min-height: 5rem;
-
-    max-width: 40%;
-    max-height: 30rem;
-  }
-
-  .spacer {
-    flex-grow: 1;
-    height: 100%;
-  }
-
-  .large-img {
-    max-width: 150px;
+    min-width: 10rem;
+    min-height: 10rem;
+    max-width: 20rem;
+    max-height: 20rem;
   }
 
   .fs {
