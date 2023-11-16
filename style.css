@@ -14,6 +14,7 @@
 
 *, *:before, *:after {
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
   margin: 0;
   font-family: 'Courier New', Courier, monospace;
   border-color: var(--bdr-color);
@@ -21,6 +22,8 @@
 
 body {
   background-color: var(--bg-color);
+  width: 100vw;
+  height: 100%;
 }
 
 input[type=text] {
@@ -64,6 +67,11 @@ mark {
   background-color: var(--emph-color);
 }
 
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
 ::selection {
   color: azure;
   background: var(--hl-color);
@@ -71,16 +79,12 @@ mark {
 
 /* UTILITIES */
 
-.fs {
-  height: 100%;
-  width: 100%;
-}
-
 .c {
   height: 100%;
 }
 
 .cc {
+  margin: 1rem;
   overflow-y: scroll;
 }
 
@@ -89,17 +93,15 @@ mark {
 }
 
 .shadow {
-  margin: 0.5rem;
   border: solid 1px ;
   box-shadow: 4px 4px var(--sh-color);
 }
 
 .searchbar-container {
   grid-area: sb;
-  margin: 0.5rem;
-  /* border-radius: 0.25rem; */
   background-color: whitesmoke;
   min-width: 0px;
+  margin: 0.5rem;
 }
 
 .searchbar {
@@ -139,12 +141,14 @@ mark {
 /* SITE WIDE */
 
 .container {
+  overflow-x: hidden;
   border-color: var(--bdr-color);
   display: grid;
   grid-template: "header" 4rem "main" 1fr "footer" 10rem;
 }
 
 header {
+  width: 100%;
   grid-area: header;
   background-color: var(--bg-color);
   display: grid;
@@ -188,8 +192,6 @@ footer {
 
   .cc {
     margin: 1rem;
-    min-width: 10rem;
-    min-height: 10rem;
     max-width: 20rem;
     max-height: 20rem;
   }
