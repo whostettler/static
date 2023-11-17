@@ -68,8 +68,9 @@ mark {
 }
 
 img {
+  display: block;
   width: 100%;
-  object-fit: contain;
+  height: auto;
 }
 
 ::selection {
@@ -81,11 +82,13 @@ img {
 
 .c {
   height: 100%;
+  width: 100%;
 }
 
 .cc {
-  margin: 1rem;
+  margin: 1rem 0;
   overflow-y: scroll;
+  width: 100%;
 }
 
 .txt-c {
@@ -138,9 +141,14 @@ img {
   flex-grow: 1;
 }
 
+.img-container {
+  height: 100%;
+}
+
 /* SITE WIDE */
 
 .container {
+  width: 100vw;
   overflow-x: hidden;
   border-color: var(--bdr-color);
   display: grid;
@@ -157,11 +165,11 @@ header {
 
 main {
   grid-area: main;
-  height: 100%;
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
   overflow: hide;
+  padding: 0 1rem;
 }
 
 footer {
@@ -188,14 +196,21 @@ footer {
   main {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
   }
 
   .cc {
     margin: 1rem;
+    width: fit-content;
+    height: fit-content;
     max-width: 20rem;
     max-height: 20rem;
   }
 
+  .spacer {
+    min-width: 5rem;
+    min-height: 5rem;
+  }
   .fs {
     padding: 0.5rem;
   }
