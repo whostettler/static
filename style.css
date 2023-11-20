@@ -73,6 +73,10 @@ img {
   height: auto;
 }
 
+section {
+  margin: 1rem 0rem;
+}
+
 ::selection {
   color: azure;
   background: var(--hl-color);
@@ -89,6 +93,7 @@ img {
   margin: 1rem 0;
   overflow-y: scroll;
   width: 100%;
+  padding: 0.25rem;
 }
 
 .txt-c {
@@ -141,18 +146,15 @@ img {
   flex-grow: 1;
 }
 
-.img-container {
-  height: 100%;
-}
-
 /* SITE WIDE */
 
 .container {
   width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
   border-color: var(--bdr-color);
   display: grid;
-  grid-template: "header" 4rem "main" 1fr "footer" 10rem;
+  grid-template: "header" 4rem "main" auto "footer" 10rem;
 }
 
 header {
@@ -175,6 +177,7 @@ main {
 footer {
   grid-area: footer;
   background-color: var(--emph-color);
+
 }
 
 #header-logo-container {
@@ -193,24 +196,29 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  img {
+    height: auto;
+    width: 100%;
+  }
+
   main {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  section {
+    margin: 0.5rem 0.5rem;
+    max-width: 46rem;
+    height: fit-content;
   }
 
   .cc {
+    flex: 1;
     margin: 1rem;
-    width: fit-content;
-    height: fit-content;
+    min-width: 20rem;
     max-width: 20rem;
     max-height: 20rem;
   }
 
-  .spacer {
-    min-width: 5rem;
-    min-height: 5rem;
-  }
   .fs {
     padding: 0.5rem;
   }
@@ -229,4 +237,11 @@ footer {
     grid-area: t;
     display: inline-block;
   }
+
+  #intro-card {
+    width: 30rem;
+  }
+
 }
+
+/* PAGE CONTENT */
