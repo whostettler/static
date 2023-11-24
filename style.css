@@ -16,7 +16,8 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   margin: 0;
-  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   border-color: var(--bdr-color);
 }
 
@@ -39,12 +40,12 @@ button {
 }
 
 h1 {
-  color: var(--bdr-color);
+  color: var(--sh-color);
   font-size: 3rem;}
 
 h2 {
   color: var(--emph-color);
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 h2.ul {
@@ -102,14 +103,7 @@ section {
 
 .shadow {
   border: solid 1px ;
-  box-shadow: 4px 4px var(--sh-color);
-}
-
-.searchbar-container {
-  grid-area: sb;
-  background-color: whitesmoke;
-  min-width: 0px;
-  margin: 0.5rem;
+  box-shadow: 3px 3px var(--txt-color);
 }
 
 .searchbar {
@@ -128,14 +122,14 @@ section {
 }
 
 .search-button {
-  width: 3rem;
-  height: 3rem;
+  height: 100%;
+  width: auto;
   padding: 0.5rem;
 }
 
 .icon-button {
-  height: fit-content;
-  width: fit-content;
+  min-height: 100%;
+  width: auto;
 }
 
 .no-scroll{
@@ -144,6 +138,11 @@ section {
 
 .spacer {
   flex-grow: 1;
+}
+
+.logo {
+  height: 54px;
+  width: 54px;
 }
 
 /* SITE WIDE */
@@ -158,11 +157,16 @@ section {
 }
 
 header {
-  width: 100%;
   grid-area: header;
+  padding: 4px 8px;
+}
+
+.page-header {
+  width: 100%;
   background-color: var(--bg-color);
   display: grid;
-  grid-template:"l sb" 4rem / 4rem 1fr; 
+  grid-template:"l ." 100% / 54px  1fr; 
+  align-items: center;
 }
 
 main {
@@ -182,17 +186,12 @@ footer {
 
 #header-logo-container {
   grid-area: l;
+  display: flex;
 }
 
 #header-title-container {
   grid-area: t;
   display: none;
-}
-
-.logo {
-  height: 4rem;
-  width: 4rem;
-  padding: 0.25rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -228,9 +227,9 @@ footer {
     justify-self: end;
   }
   
-  header {
+ .page-header {
     display: grid;
-    grid-template:"l t sb" 4rem / 1fr 1fr 1fr; 
+    grid-template:"l t ." 100% / 1fr 1fr 1fr; 
   }
 
   #header-title-container {
@@ -242,6 +241,10 @@ footer {
     width: 30rem;
   }
 
+  .logo {
+    height: ;
+    width: auto;
+  }
 }
 
 /* PAGE CONTENT */
